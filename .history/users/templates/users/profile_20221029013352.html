@@ -1,0 +1,28 @@
+{% extends 'users/base.html' %} {% load crispy_forms_tags %} {% block content %}
+<div class="container">
+  <h2 style="color: #282f30; background: #fd5e14; text-align: center">
+    <span
+      style="
+        font-size: 24px;
+        font-family: sans-serif;
+        border: 2px dotted black;
+        margin-right: 2rem;
+      "
+      >UserName
+    </span>
+    {{user.username}}
+  </h2>
+  <h2 style="color: #282f30">
+    <span
+      style="
+        font-size: 24px;
+        font-family: sans-serif;
+        border: 2px dotted black;
+        margin-right: 2rem;
+      "
+      >Email:
+    </span>
+    {{user.email}}
+  </h2>
+</div>
+{% endblock %}

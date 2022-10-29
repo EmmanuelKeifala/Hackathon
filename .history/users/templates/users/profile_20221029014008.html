@@ -1,0 +1,25 @@
+{% extends 'users/base.html' %} {% load crispy_forms_tags %} {% block content %}
+<div
+  class="container"
+  style="
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 1000px;
+    background: linear-gradient(90deg, #c7c5f4, #776bcc);
+  "
+>
+  <h2 style="color: #282f30; text-align: center">
+    <span style="font-size: 24px; font-family: sans-serif; margin-right: 2rem"
+      >UserName
+    </span>
+    {{user.username}}
+  </h2>
+  <h2 style="color: #282f30; text-align: center">
+    <span style="font-size: 24px; font-family: sans-serif; margin-right: 2rem"
+      >Email:
+    </span>
+    {{user.email}}
+  </h2>
+</div>
+{% endblock %}

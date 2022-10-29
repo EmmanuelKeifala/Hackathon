@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+<form method="POST" action="{% url 'upload'%}" entypr="multipart/form-data">
+  {% csrf_token %}
+  <ul class="contactList" style="list-style: none">
+    <li id="number_of_sales" class="contact">{{ form.number_of_sales }}</li>
+    <li id="revenue" class="contact">{{ form.revenue }}</li>
+    <li id="number_of_customers" class="contact">
+      {{ form.number_of_customers }}
+    </li>
+    <li id="year" class="contact">{{ form.year }}</li>
+  </ul>
+  <input type="submit" value="Send Data to DataBase" />
+</form>

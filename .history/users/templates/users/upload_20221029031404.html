@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Enter business Data</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <style>
+      * {
+        font-family: "Quicksand", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="{% url 'frontpage' %}">
+          <img
+            src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/django.png"
+            width="30px"
+            height="200px"
+          />
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    <!--new form-->
+    <section class="hero is-dark is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+              <form method="POST" action="." class="box" encrypt="mulitpart/form">
+                {% csrf_token %}
+
+                <h1 class="has-text-centered mb-5 is-size-3">Enter the data</h1>
+
+                <div class="field">
+                  <label for="" class="label">Number of sales</label>
+                  <div class="control has-icons-left">
+                    {{ form.number_of_sales }}
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="" class="label">Income</label>
+                  <div class="control has-icons-left">
+                    {{ form.revenue }}
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="" class="label">Total Number of customers</label>
+                  <div class="control has-icons-left">
+                    {{ form.number_of_customers }}
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<form method="POST" action="{% url 'upload'%}" entypr="multipart/form-data">
+  {% csrf_token %}
+  <ul class="contactList">
+    <li id="subject" class="contact">{{ form.number_of_sales }}</li>
+    <li id="email" class="contact">{{ form.revenue }}</li>
+    <li id="message" class="contact">{{ form.number_of_customers }}</li>
+    <li id="message" class="contact">{{ form.year }}</li>
+  </ul>
+  <input type="submit" value="Send Data to DataBase" />
+  {{form}}
+
+  <button></button>
+</form>
