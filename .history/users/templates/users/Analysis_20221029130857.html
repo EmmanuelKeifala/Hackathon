@@ -163,6 +163,8 @@
 
 <script type="text/javascript">
     let num_cos = {{num_cos|safe}}
+    {% comment %} let df = {{df|safe}} {% endcomment %}
+
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'polarArea',

@@ -91,7 +91,7 @@
 
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'radar',
         data: {
             labels: df,
             datasets: [{
@@ -165,7 +165,7 @@
     let num_cos = {{num_cos|safe}}
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
-        type: 'polarArea',
+        type: 'radar',
         data: {
             labels: df,
             datasets: [{
